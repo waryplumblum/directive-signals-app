@@ -8,7 +8,7 @@ import { SingleUserResponse, User } from '../interfaces/user-request.interface';
 })
 export class UsersServiceService {
 
-  private baseUrl = 'https://regres.in/api/users';
+  private baseUrl = 'https://reqres.in/api/users';
 
   constructor( private http:HttpClient ) { }
 
