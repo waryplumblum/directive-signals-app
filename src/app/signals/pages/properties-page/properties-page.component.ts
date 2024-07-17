@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { User } from '../../interfaces/user-request.interface';
 
 @Component({
@@ -15,6 +15,11 @@ export class PropertiesPageComponent {
     last_name: 'Bluth',
     avatar: 'https://reqres.in/img/faces/1-image.jpg'
   });
+
+  public userChangedEffect = effect(()=>{
+    console.log('userChangedEffect triggered');
+
+  })
 
 
   onFieldUpdated(field:keyof User,value:string) {
